@@ -17,6 +17,15 @@ Front-end only, no backend. Mock data. Goal: clean, interactive, polished APK.
 **Deliverable:** APK, clean UI, good spacing, smooth navigation, polished feel.
 
 ---
+ 
+## Design mockups
+
+| Mode   | Mockup |
+|--------|--------|
+| **Light** | https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png |
+| **Dark**  | https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png |
+
+---
 
 ## Tech Stack
 
