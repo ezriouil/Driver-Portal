@@ -34,14 +34,19 @@
 
 ---
 
-## Design mockups
+## Light mode mockup
 
-Target UI reference (light and dark):
+<p align="center">
+  <img src="https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png" alt="Driver Portal – Light mode" width="280"/>
+</p>
 
-| Mode | Mockup |
-|------|--------|
-| **Light** | [View light mode](https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png) |
-| **Dark** | [View dark mode](https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png) |
+---
+
+## Dark mode mockup
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png" alt="Driver Portal – Dark mode" width="280"/>
+</p>
 
 ---
 
