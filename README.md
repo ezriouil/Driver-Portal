@@ -1,6 +1,10 @@
 # Driver Portal UI – Implementation Plan
 
+![Driver Portal logo](https://res.cloudinary.com/dwcnliksx/image/upload/v1770400466/logo_t5l57k.png)
+
 Front-end only, no backend. Mock data. Goal: clean, interactive, polished APK.
+
+**Logo URI:** `https://res.cloudinary.com/dwcnliksx/image/upload/v1770400466/logo_t5l57k.png`
 
 ---
 
