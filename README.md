@@ -37,7 +37,7 @@
 ## Light mode mockup
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png" alt="Driver Portal – Light mode" width="280"/>
+  <img src="https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png" alt="Driver Portal – Light mode"/>
 </p>
 
 ---
@@ -45,7 +45,7 @@
 ## Dark mode mockup
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png" alt="Driver Portal – Dark mode" width="280"/>
+  <img src="https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png" alt="Driver Portal – Dark mode"/>
 </p>
 
 ---
