@@ -1,4 +1,4 @@
-# Driver Portal UI
+update this file of readmi of github # Driver Portal UI
 
 Flutter app for drivers: map, online/offline toggle, ride offers, route screen, settings. Front-end only with mock data.
 
@@ -30,7 +30,7 @@ Front-end only, no backend. Mock data. Goal: clean, interactive, polished APK.
 
 ### Tech stack
 
-- **Flutter**, **GetX** (state + routing), **google_maps_flutter**, **shared_preferences**, **lottie**, **iconsax_flutter**. Config in `app_constants.dart` and `app_config.dart`.
+- **Flutter**, **google_maps_flutter**, lightweight state (ValueNotifier/Provider), GoRouter, `app_constants.dart` for config.
 
 ### Map API key
 
