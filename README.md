@@ -30,7 +30,7 @@ Front-end only, no backend. Mock data. Goal: clean, interactive, polished APK.
 
 ### Tech stack
 
-- **Flutter**, **google_maps_flutter**, lightweight state (ValueNotifier/Provider), GoRouter, `app_constants.dart` for config.
+- **Flutter**, **GetX** (state + routing), **google_maps_flutter**, **shared_preferences**, **lottie**, **iconsax_flutter**. Config in `app_constants.dart` and `app_config.dart`.
 
 ### Map API key
 
