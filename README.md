@@ -1,16 +1,38 @@
-# driver_portal_ui
+# Driver Portal UI
 
-A new Flutter project.
+Flutter app for drivers: map, online/offline toggle, ride offers, route screen, settings. Front-end only with mock data.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- Flutter 3.x required. Clone, then run `flutter pub get` and `flutter run`.
+- [Flutter documentation](https://docs.flutter.dev/)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Implementation Plan (summary)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Front-end only, no backend. Mock data. Goal: clean, interactive, polished APK.
+
+### Requirements
+
+| Feature | Description |
+|--------|-------------|
+| **Bottom nav** | Clean, modern. Icon for settings → opens drawer (Settings + History) |
+| **Home** | Map as main view (Google Maps with provided API key) |
+| **Online/Offline** | Toggle bottom-left. When **Online** → show ride offer with Accept/Decline |
+| **Route screen** | Map with pickup + destination + route line; bottom popup with trip info |
+| **Prices** | Fixed but displayed as adjustable via config (e.g. in Settings) |
+
+### Design mockups
+
+- **Light mode:** [mockup](https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png)
+- **Dark mode:** [mockup](https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png)
+
+### Tech stack
+
+- **Flutter**, **google_maps_flutter**, lightweight state (ValueNotifier/Provider), GoRouter, `app_constants.dart` for config.
+
+### Map API key
+
+- **Android:** `AndroidManifest.xml` – `com.google.android.geo.API_KEY`
+- **iOS:** Add key in `Info.plist` when building for iOS.
