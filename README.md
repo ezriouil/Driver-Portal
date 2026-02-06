@@ -20,10 +20,15 @@ Front-end only, no backend. Mock data. Goal: clean, interactive, polished APK.
  
 ## Design mockups
 
-| Mode   | Mockup |
-|--------|--------|
-| **Light** | https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png |
-| **Dark**  | https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png |
+Target theme and layout should follow these screens (light and dark mode), similar to the [Books-Library](https://github.com/ezriouil/Authentication) project style where both themes are clearly visible.
+
+### Light mode
+
+![Driver Portal – Light mode](https://res.cloudinary.com/dwcnliksx/image/upload/v1770399834/sc1_lrwbtt.png)
+
+### Dark mode
+
+![Driver Portal – Dark mode](https://res.cloudinary.com/dwcnliksx/image/upload/v1770399835/sc2_hfto6e.png)
 
 ---
 
