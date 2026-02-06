@@ -1,3 +1,5 @@
+// Home: full-screen map, drawer (Settings/History), bottom bar, online toggle, ride offer card.
+
 import 'dart:ui';
 
 import 'package:avatar_glow/avatar_glow.dart';
@@ -7,6 +9,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../core/config/app_constants.dart';
+import '../../core/config/map_style.dart';
 import '../../core/widgets/lottie_loading_wrapper.dart';
 import 'home_controller.dart';
 import 'ride_offer_card.dart';
@@ -307,6 +310,7 @@ class _HomeMapContent extends GetView<HomeController> {
                 myLocationButtonEnabled: true,
                 mapType: MapType.normal,
                 zoomControlsEnabled: false,
+                style: mapStyleUber,
               )),
         Obx(() {
           return Positioned(

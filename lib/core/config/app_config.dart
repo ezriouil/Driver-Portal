@@ -2,8 +2,8 @@ import 'package:flutter/foundation.dart';
 
 import 'app_constants.dart';
 
-/// Runtime config (fixed logic, but values feel adjustable via Settings).
-/// Not persisted in this demo; can add SharedPreferences later.
+/// Runtime config for base fare and per-km rate.
+/// Values are editable from Settings; can be persisted later (e.g. SharedPreferences).
 class AppConfig extends ChangeNotifier {
   AppConfig() {
     _baseFare = AppConstants.defaultBaseFare;
@@ -16,8 +16,7 @@ class AppConfig extends ChangeNotifier {
   String get baseFare => _baseFare;
   String get perKmRate => _perKmRate;
 
-  String get formattedBaseFare =>
-      '${AppConstants.currencySymbol}$_baseFare';
+  String get formattedBaseFare => '${AppConstants.currencySymbol}$_baseFare';
 
   void setBaseFare(String value) {
     _baseFare = value;

@@ -1,3 +1,5 @@
+// Ride offer card: rider, pickup/destination, price, Accept/Decline. Shown when online.
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';

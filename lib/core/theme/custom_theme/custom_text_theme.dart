@@ -1,7 +1,9 @@
+// TextTheme for light/dark. Used by [ThemeApp].
+
 import 'package:driver_portal_ui/core/config/app_constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextTheme{
+class CustomTextTheme {
   CustomTextTheme._();
 
   /// Text For Light Theme

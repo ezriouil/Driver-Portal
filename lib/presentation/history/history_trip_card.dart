@@ -1,3 +1,5 @@
+// Single trip card in history list: rider, route, "View Route" button.
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -34,28 +36,26 @@ class HistoryTripCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24),
-            // color: AppConstants.WHITE,
-            color: Colors.white,
             gradient: LinearGradient(
-                            begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                            colors: [(isDark ? AppConstants.GRAY_DARK : AppConstants.GRAY_LIGHT), (isDark ? AppConstants.BLACK : AppConstants.WHITE)]),
-                          boxShadow: [
-                            BoxShadow(
-                              color: isDark ? AppConstants.GRAY_DARK : AppConstants.GRAY_LIGHT,
-                              blurRadius: 1,
-                              blurStyle: BlurStyle.inner,
-                              offset: const Offset(2, 2),
-                            ),
-                          ],
-                        
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+              colors: [
+                isDark ? AppConstants.GRAY_DARK : AppConstants.GRAY_LIGHT,
+                isDark ? AppConstants.BLACK : AppConstants.WHITE,
+              ],
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: isDark ? AppConstants.GRAY_DARK : AppConstants.GRAY_LIGHT,
+                blurRadius: 1,
+                blurStyle: BlurStyle.inner,
+                offset: const Offset(2, 2),
+              ),
+            ],
             border: Border.all(
-              color: isDark
-                  ? AppConstants.GRAY_DARK.withValues(alpha: 0.15)
-                  : AppConstants.GRAY_DARK.withValues(alpha: 0.6),
+              color: isDark ? AppConstants.GRAY_DARK.withValues(alpha: 0.15) : AppConstants.GRAY_DARK.withValues(alpha: 0.6),
               width: 0.5,
             ),
-            
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,

@@ -1,10 +1,9 @@
 import '../../domain/models/trip_entity.dart';
 
-/// Mock ride offers and route points for demo.
+/// Mock ride offer and history. Replace with API later.
 class MockTrips {
   MockTrips._();
 
-  // Rabat, Morocco coordinates
   static const double _pickupLat = 34.0209;
   static const double _pickupLng = -6.8416;
   static const double _destLat = 34.0181;
@@ -34,7 +33,7 @@ class MockTrips {
         TripEntity(
           id: 'offer_02',
           riderName: 'Nabil Ezriouil',
-        riderImagePath: 'assets/images/mohamed_ezriouil_1.png',
+          riderImagePath: 'assets/images/mohamed_ezriouil_1.png',
           pickupAddress: 'Avenue Fal Ould Oumeir, Rabat',
           destinationAddress: 'Medina, Rabat',
           pickupLat: 34.0150,
@@ -46,7 +45,7 @@ class MockTrips {
         TripEntity(
           id: 'offer_03',
           riderName: 'Miloud Ezriouil',
-        riderImagePath: 'assets/images/mohamed_ezriouil_1.png',
+          riderImagePath: 'assets/images/mohamed_ezriouil_1.png',
           pickupAddress: 'Souissi, Rabat',
           destinationAddress: 'Quartier Hay Riad, Rabat',
           pickupLat: 34.0050,

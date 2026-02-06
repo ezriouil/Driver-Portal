@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../config/app_constants.dart';
 
+/// Frosted-glass circle button. Used on map (back, zoom in/out).
 class GlassCircleButton extends StatelessWidget {
   const GlassCircleButton({
     super.key,
@@ -33,9 +34,7 @@ class GlassCircleButton extends StatelessWidget {
               shape: BoxShape.circle,
               color: (isDark ? AppConstants.GRAY_DARK : AppConstants.GRAY_LIGHT).withValues(alpha: isDark ? 0.5 : 0.1),
               border: Border.all(
-                color: isDark
-                    ? AppConstants.GRAY_LIGHT.withValues(alpha: 0.15)
-                    : AppConstants.GRAY_DARK.withValues(alpha: 0.6),
+                color: isDark ? AppConstants.GRAY_LIGHT.withValues(alpha: 0.15) : AppConstants.GRAY_DARK.withValues(alpha: 0.6),
                 width: 0.5,
               ),
               boxShadow: [
@@ -47,11 +46,7 @@ class GlassCircleButton extends StatelessWidget {
               ],
             ),
             alignment: Alignment.center,
-            child: Icon(
-              icon,
-              size: iconSize,
-              color: isDark ? AppConstants.WHITE : AppConstants.GRAY_DARK,
-            ),
+            child: Icon(icon, size: iconSize, color: isDark ? AppConstants.WHITE : AppConstants.GRAY_DARK),
           ),
         ),
       ),

@@ -1,5 +1,5 @@
-/// Uber-style map for Google Map (minimal, clean, driver-focused).
-/// Applied via GoogleMapController.setMapStyle(mapStyleUber).
+/// JSON style for Google Map (minimal, driver-focused).
+/// Use: controller.setMapStyle(mapStyleUber) in onMapCreated.
 const String mapStyleUber = '''
 [
   {

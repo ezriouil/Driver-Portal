@@ -1,4 +1,4 @@
-/// Domain entity for a ride/trip. Pure Dart, no framework dependencies.
+/// Single ride/trip. Pure Dart; used by mock data, home offer card, route screen, history.
 class TripEntity {
   const TripEntity({
     required this.id,
@@ -27,7 +27,7 @@ class TripEntity {
   final List<LatLngPoint> routePoints;
 }
 
-/// A point with latitude and longitude (domain layer).
+/// Lat/lng point for route polyline.
 class LatLngPoint {
   const LatLngPoint({required this.lat, required this.lng});
   final double lat;

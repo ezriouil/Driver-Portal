@@ -1,3 +1,5 @@
+// One row in Settings: icon, title, subtitle, optional trailing (e.g. switch).
+
 import 'package:flutter/material.dart';
 
 import '../../core/config/app_constants.dart';

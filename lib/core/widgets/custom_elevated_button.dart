@@ -1,6 +1,7 @@
 import 'package:driver_portal_ui/core/config/app_constants.dart';
 import 'package:flutter/material.dart';
 
+/// Primary action button. Uses [AppConstants.PRIMARY] / [SECONDARY] by default.
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
     super.key,
@@ -36,18 +37,13 @@ class CustomElevatedButton extends StatelessWidget {
       height: height ?? _spaceDefault * 6,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(
-            horizontal: _spaceBetweenItems,
-            vertical: _spaceBetweenItems / 4,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: _spaceBetweenItems, vertical: _spaceBetweenItems / 4),
           backgroundColor: resolvedBg,
           foregroundColor: textColor ?? AppConstants.WHITE,
           elevation: elevation ?? 2,
           shadowColor: resolvedBg,
           side: side,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(_spaceDefault * 2),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(_spaceDefault * 2)),
         ),
         onPressed: onPressed,
         child: child,

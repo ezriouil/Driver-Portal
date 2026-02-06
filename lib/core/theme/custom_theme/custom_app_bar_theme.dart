@@ -1,3 +1,5 @@
+// AppBar theme for light/dark. Used by [ThemeApp].
+
 import 'package:driver_portal_ui/core/config/app_constants.dart' show AppConstants;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

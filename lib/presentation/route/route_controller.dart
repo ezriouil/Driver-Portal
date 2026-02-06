@@ -5,20 +5,11 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../core/config/app_constants.dart';
-import '../../core/config/map_style.dart';
 import '../../domain/models/trip_entity.dart';
 
+/// Route screen state: map controller, markers, polyline from [trip]. Fits bounds on load.
 class RouteController extends GetxController {
   final Completer<GoogleMapController> mapController = Completer<GoogleMapController>();
-  final RxBool mapLoading = true.obs;
-
-  @override
-  void onInit() {
-    super.onInit();
-    Future.delayed(const Duration(seconds: 2), () {
-      if (mapLoading.value) mapLoading.value = false;
-    });
-  }
 
   TripEntity get trip => Get.arguments as TripEntity;
 
@@ -29,14 +20,14 @@ class RouteController extends GetxController {
         position: LatLng(trip.pickupLat, trip.pickupLng),
         icon: BitmapDescriptor.defaultMarkerWithHue(Get.context!.isDarkMode ? BitmapDescriptor.hueBlue : BitmapDescriptor.hueRed),
         infoWindow: InfoWindow(title: 'Pickup', snippet: trip.pickupAddress),
-        zIndex: 1,
+        zIndexInt: 1,
       ),
       Marker(
         markerId: const MarkerId('destination'),
         position: LatLng(trip.destinationLat, trip.destinationLng),
         icon: BitmapDescriptor.defaultMarkerWithHue(Get.context!.isDarkMode ? BitmapDescriptor.hueBlue : BitmapDescriptor.hueRed),
         infoWindow: InfoWindow(title: 'Destination', snippet: trip.destinationAddress),
-        zIndex: 2,
+        zIndexInt: 2,
       ),
     };
   }
@@ -67,10 +58,7 @@ class RouteController extends GetxController {
       );
 
   void onMapCreated(GoogleMapController controller) {
-    if (!mapController.isCompleted) {
-      mapController.complete(controller);
-    }
-    controller.setMapStyle(mapStyleUber);
+    if (!mapController.isCompleted) mapController.complete(controller);
     _fitBounds(controller);
   }
 

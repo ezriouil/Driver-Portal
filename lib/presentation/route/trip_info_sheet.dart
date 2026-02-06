@@ -1,3 +1,5 @@
+// Draggable trip info sheet on route screen: rider, pickup/destination, Cancel/Navigate.
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';

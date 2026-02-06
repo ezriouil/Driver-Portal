@@ -9,6 +9,8 @@ import '../../core/widgets/custom_text_field.dart';
 import 'settings_controller.dart';
 import 'settings_setting_tile.dart';
 
+/// Settings: base fare, per km rate (bottom sheets), dark mode toggle.
+
 /// Spacing constants matching reference layout.
 const double _kSpaceDefault = 8;
 const double _kSpaceBetweenItems = 16;
@@ -141,51 +143,6 @@ class SettingsScreen extends GetView<SettingsController> {
               const SizedBox(height: _kSpaceDefault * 4),
             ],
           ),
-        ),
-      ),
-    );
-  }
-
-  void _showEarningsBottomSheet(BuildContext context) {
-    final ctrl = Get.find<SettingsController>();
-    final textController = TextEditingController(text: ctrl.totalEarningsDisplay.value);
-
-    AppBottomSheet.show(
-      content: Padding(
-        padding: const EdgeInsets.all(_kSpaceBetweenItems),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              'Total earnings',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                color: _darkLightColor(context),
-              ),
-            ),
-            const SizedBox(height: _kSpaceBetweenItems / 2),
-            Text(
-              'Update the total earnings shown on your profile.',
-              style: Theme.of(context).textTheme.bodyMedium
-            ),
-            const SizedBox(height: _kSpaceBetweenItems),
-            CustomTextField(
-              controller: textController,
-              hint: 'e.g. 0.00',
-              icon: Iconsax.money_send_copy,
-              prefixText: '${AppConstants.currencySymbol} ',
-              prefixStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(color: _darkLightColor(context)),
-              keyboardType: const TextInputType.numberWithOptions(decimal: true),
-            ),
-            const SizedBox(height: _kSpaceBetweenItems),
-            CustomElevatedButton(
-              onPressed: () {
-                ctrl.setTotalEarnings(textController.text);
-                Get.back();
-              },
-              child: const Text('Save'),
-            ),
-          ],
         ),
       ),
     );

@@ -1,10 +1,12 @@
+// Route screen: map with pickup/destination markers and polyline, trip info bottom sheet.
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
+import '../../core/config/map_style.dart';
 import '../../core/widgets/glass_circle_button.dart';
-import '../../core/widgets/lottie_loading_wrapper.dart';
 import 'route_controller.dart';
 import 'trip_info_sheet.dart';
 
@@ -18,15 +20,16 @@ class RouteScreen extends GetView<RouteController> {
     return Scaffold(
       body: Stack(
         children: [
-           GoogleMap(
-                  initialCameraPosition: controller.initialCameraPosition,
-                  onMapCreated: controller.onMapCreated,
-                  markers: controller.markers,
-                  polylines: controller.polylines,
-                  myLocationEnabled: true,
-                  mapType: MapType.normal,
-                  zoomControlsEnabled: false,
-                ),
+          GoogleMap(
+            initialCameraPosition: controller.initialCameraPosition,
+            onMapCreated: controller.onMapCreated,
+            markers: controller.markers,
+            polylines: controller.polylines,
+            myLocationEnabled: true,
+            mapType: MapType.normal,
+            zoomControlsEnabled: false,
+            style: mapStyleUber,
+          ),
           Positioned(
             top: MediaQuery.paddingOf(context).top + 12,
             left: 16,

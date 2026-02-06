@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-/// Global theme mode. Drawer uses this for Light/Dark toggle.
+/// Global theme mode. Settings screen toggles light/dark via [setTheme].
 class ThemeController extends GetxController {
   final Rx<ThemeMode> themeMode = ThemeMode.light.obs;
 

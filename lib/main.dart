@@ -1,3 +1,6 @@
+// Driver Portal UI – Flutter app for drivers (map, ride offers, route, settings).
+// Entry point: locks portrait orientation, uses GetX for routing and theme.
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show SystemChrome, DeviceOrientation, SystemUiMode;
 import 'package:get/get.dart';
@@ -10,19 +13,20 @@ import 'core/routes/app_routes.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Portrait only
+  // Portrait only.
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
-  // - - - - - - - - - - - - - - - - - - HIDE TOP STATUS BAR + SYSTEM BOTTOM BAR - - - - - - - - - - - - - - - - - -  //
+  // Full-screen: hide status bar and system nav bar.
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
   Get.put(ThemeController());
   runApp(const DriverPortalApp());
 }
 
+/// Root widget. Theme reacts to [ThemeController] (light/dark from Settings).
 class DriverPortalApp extends StatelessWidget {
   const DriverPortalApp({super.key});
 

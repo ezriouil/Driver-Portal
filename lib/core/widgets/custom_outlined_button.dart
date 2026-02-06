@@ -1,6 +1,7 @@
 import 'package:driver_portal_ui/core/config/app_constants.dart';
 import 'package:flutter/material.dart';
 
+/// Secondary action button (outline). Theme-aware border and text color.
 class CustomOutlinedButton extends StatelessWidget {
   const CustomOutlinedButton({
     super.key,
@@ -34,18 +35,13 @@ class CustomOutlinedButton extends StatelessWidget {
       height: height ?? _spaceDefault * 6,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(
-            horizontal: _spaceBetweenItems,
-            vertical: _spaceBetweenItems / 4,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: _spaceBetweenItems, vertical: _spaceBetweenItems / 4),
           elevation: elevation ?? 2,
           backgroundColor: AppConstants.TRANSPARENT,
           foregroundColor: resolvedColor,
           shadowColor: resolvedColor,
           side: side ?? BorderSide(color: resolvedColor, width: 0.5),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(_spaceDefault * 2),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(_spaceDefault * 2)),
         ),
         onPressed: onPressed,
         child: child,

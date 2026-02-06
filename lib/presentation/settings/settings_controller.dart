@@ -5,6 +5,7 @@ import '../../core/config/app_config.dart';
 import '../../core/config/app_constants.dart';
 import '../../core/theme/theme_controller.dart';
 
+/// Settings state: fare config, theme toggle, units (optional). Persists units to SharedPreferences.
 class SettingsController extends GetxController {
   final AppConfig config = AppConfig();
 

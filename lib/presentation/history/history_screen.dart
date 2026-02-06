@@ -1,3 +1,5 @@
+// History: list of past trips (mock). Tapping a card opens route screen.
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';

@@ -1,3 +1,5 @@
+// InputDecoration theme for TextField. Used by [ThemeApp].
+
 import 'package:driver_portal_ui/core/config/app_constants.dart';
 import 'package:flutter/material.dart';
 

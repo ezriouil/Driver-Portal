@@ -27,19 +27,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final bg = isDark ? AppConstants.BLACK : AppConstants.GRAY_LIGHT;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: bg,
       body: Center(
         child: Image.asset(
           'assets/images/logo.png',
           height: 120,
           fit: BoxFit.contain,
-          errorBuilder: (_, __, ___) => Icon(
-            Icons.directions_car_rounded,
-            size: 80,
-            color:AppConstants.GRAY_DARK,
-          ),
+          errorBuilder: (context, error, stackTrace) => Icon(Icons.directions_car_rounded, size: 80, color: AppConstants.GRAY_DARK),
         ),
       ),
     );
